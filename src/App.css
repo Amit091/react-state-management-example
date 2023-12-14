@@ -4,7 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -17,7 +16,6 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,13 +24,11 @@
     transform: rotate(360deg);
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-
 .card {
   padding: 3em;
   display: flex;
@@ -58,15 +54,79 @@
   border: 1.5px solid teal;
   border-radius: 20px;
   margin: 5px;
-  height: 40vw;
-  width: 40vw;
-  min-height: 400px;
-  min-width: 400px;
+  height: 30vw;
+  width: 30vw;
+  min-height: 250px;
+  min-width: 250px;
 }
 
-.block{
+.block {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 25%;
+}
+
+.container-box:hover {
+  background-color: #61dafbaa;
+}
+
+.card-button:hover {
+  background-color: green;
+}
+.card-button2:hover {
+  background-color: red;
+}
+
+.item {
+  float: right;
+  min-height: fit-content;
+}
+.item h1 {
+  text-align: left;
+  margin-top: -5px;
+}
+
+.item-0 {
+  background-color: violet;
+  min-width: 500px;
+}
+.item-1 {
+  background-color: indigo;
+  min-width: 440px;
+}
+.item-2 {
+  background-color: blue;
+  min-width: 360px;
+}
+.item-3 {
+  background-color: green;
+  min-width: 280px;
+}
+.item-4 {
+  background-color: red;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+nav{
+  background-color: teal;  
+  border:2px black solid !important;
+  border-radius: 20px;
+  height:35px !important;
+  padding-top: 10px;
+  width: 75vw !important;
+  margin-left: 0rem !important;
+}
+.nav-link {
+color:#fff;
+border-radius: 5px;
+border-color: black !important;
+/* padding: 20px; */
+padding-top: 5px;
+padding-bottom: 5px;
+margin-left: 10px;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(1, 36, 24);
 }

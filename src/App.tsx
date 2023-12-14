@@ -1,27 +1,24 @@
+import { useState } from "react";
 import "./App.css";
-import { BlockA, BlockB, BlockC, BlockD } from "./components/";
+import Item from "./components/Items/Item";
+import Block from "./components/blocks/Block";
 
 export const App = () => {
+  const [item, setItem] = useState(0);
 
   return (
     <>
-      <div className="main">
-        <div className="container">
-          <div className="container-box">
-            <BlockA />
-          </div>
-          <div className="container-box">
-            <BlockB />
-          </div>
-        </div>
-        <div className="container">
-          <div className="container-box">
-            <BlockC />
-          </div>
-          <div className="container-box">
-            <BlockD />
-          </div>
-        </div>
+      <nav>
+        <a className="nav-link" href="#state-1">Use State</a>
+        <a className="nav-link" href="#state-2">Passing state within components</a>
+      </nav>
+      <div>
+        <h2 id="state-1">use state example</h2>
+        <Block />
+      </div>
+      <div>
+        <h2 id="state-2">Passing state within components</h2>
+        <Item {...{ item, setItem }} />
       </div>
     </>
   );
