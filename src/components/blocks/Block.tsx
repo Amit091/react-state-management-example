@@ -5,7 +5,7 @@ export const Block = () => {
   const [counterA, setCounterA] = useState(0);
   const [counterB, setCounterB] = useState(0);
   return (  
-      <div className="main">
+      <div className="main-container">
         <div className="container">
           <div className="container-box">
             <BlockA counterA={counterA} setCounterA={setCounterA} />
