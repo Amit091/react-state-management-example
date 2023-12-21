@@ -3,11 +3,13 @@ import "./App.css";
 import Item from "./components/Items/Item";
 import Block from "./components/blocks/Block";
 import Square from "./components/Square/Square";
+import ThunkComponent from "./components/ThunkComponent";
 
 interface IExample {
   e0: boolean;
   e1: boolean;
   e2: boolean;
+  e3: boolean;
 }
 
 export const App = () => {
@@ -17,6 +19,7 @@ export const App = () => {
     e0: false,
     e1: false,
     e2: false,
+    e3: false,
   });
 
   const updateExample = (key: keyof IExample) => {
@@ -25,6 +28,7 @@ export const App = () => {
         e0: false,
         e1: false,
         e2: false,
+        e3: false,
       },
       [key]: !prevExample[key],
     }));
@@ -37,10 +41,13 @@ export const App = () => {
           Use State
         </button>
         <button className="nav-link" onClick={() => updateExample(`e1`)}>
-          Passing state within components
+          Passing state
         </button>
         <button className="nav-link" onClick={() => updateExample(`e2`)}>
           Redux toolkit
+        </button>
+        <button className="nav-link" onClick={() => updateExample(`e3`)}>
+          Thunk
         </button>
       </nav>
       <div className="main-example">
@@ -59,6 +66,8 @@ export const App = () => {
         ) : null}
 
         {example.e2 ? <Square /> : null}
+
+        {example.e3 ? <ThunkComponent /> : null}
       </div>
     </div>
   );
